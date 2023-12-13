@@ -66,4 +66,27 @@ while True:
     # Detect markers
     corners, ids, rejectedImgPoints = aruco.detectMarkers(frame, aruco_dict)
 
-# test
+
+ # Draw markers and label them with corresponding letters
+    if ids is not None:
+            for i in range(len(corners)):
+                x = int(np.mean(corners[i][0][:, 0]))
+                y = int(np.mean(corners[i][0][:, 1]))
+                if ids[i][0] in id_to_letter:
+                    letter = id_to_letter[ids[i][0]]
+                    # print(letter)
+                    cv2.putText(frame, 'id = ' + letter, (x, y),
+                                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+                    
+                    detected_letter = letter
+
+    # Display the frame
+    cv2.imshow('frame', frame)
+
+    # Break the loop when 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Release the capture and close all OpenCV windows
+cap.release()
+cv2.destroyAllWindows()
