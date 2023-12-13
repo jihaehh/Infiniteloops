@@ -1,6 +1,6 @@
 # Infiniteloops
 
-### project summary
+## project summary
 This Python code utilizes OpenCV and the ArUco library to detect markers in real-time through a webcam feed. It displays the corresponding letters associated with the detected markers on the webcam screen. The program is designed with the theme of "Korea, and it visually represents content related to a patriotic girl.
 
 The key components of the program include:
