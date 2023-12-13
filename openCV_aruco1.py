@@ -47,3 +47,21 @@ marker_patterns = [
      [1, 0, 0, 0, 1]],
 
 ]
+# Add marker patterns to the custom dictionary
+for i, pattern in enumerate(marker_patterns):
+    aruco_dict.bytesList[i] = aruco.Dictionary_getByteListFromBits(
+        np.array(pattern, dtype=np.uint8))
+
+# Initialize video capture
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+
+    # Convert frame to grayscale
+    # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    # Detect markers
+    corners, ids, rejectedImgPoints = aruco.detectMarkers(frame, aruco_dict)
