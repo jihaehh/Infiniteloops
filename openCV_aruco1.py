@@ -65,3 +65,5 @@ while True:
 
     # Detect markers
     corners, ids, rejectedImgPoints = aruco.detectMarkers(frame, aruco_dict)
+
+# test
