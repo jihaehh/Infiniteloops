@@ -24,3 +24,6 @@ The key components of the program include:
    - The program exits when the user presses the 'q' key.
 
 This example visually represents the theme of a patriotic girl through real-time marker detection, where markers with the characters 'Korea' are identified and displayed on the webcam feed.
+
+## A video about our project
+> https://youtu.be/LO_4a9Jqg3w
