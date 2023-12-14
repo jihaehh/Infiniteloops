@@ -29,9 +29,9 @@ This example visually represents the theme of a patriotic girl through real-time
 > https://youtu.be/LO_4a9Jqg3w
 
 ## Usage Package & Version
-> requirements.txt:/
-> numpy==1.23.0/
-> opencv-contrib-python==4.5.5/
+> requirements.txt:  
+> numpy==1.23.0  
+> opencv-contrib-python==4.5.5  
 
 ## Practice
 > python3 aruco_detect_original.py
